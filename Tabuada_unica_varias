@@ -1,0 +1,36 @@
+print('Qual tabuada deseja uma ou mais ?')
+print('Exemplo: Digite um número ou escreva mais')
+pergunta = str(input('Digite aqui. '))
+
+if 'mais' == pergunta:
+    if pergunta.istitle():
+        pergunta = str(input('Digita ate quantas tabuada de '))
+        unica = int(pergunta) + 1
+        print(f'Mostrando todas tabuada até o {pergunta} ')
+    elif not pergunta.isnumeric():
+        pergunt = str(input('Digita ate quantas tabuada de: '))
+        pergunta = int(pergunt)
+        unica = int(pergunta) + 1
+        varias = int(1) + 1
+        print(f'Mostrando todas tabuada até o {pergunta} ')
+    else:
+        pergunta = int(pergunta)
+        unica = int(pergunta) + 1
+        sub_varias = int(pergunta) - unica
+        varias = int(sub_varias) + 2
+
+        print(f'Mostrando a Tabuada do {pergunta} ')
+
+else:
+    pergunta = int(pergunta)
+    unica = int(pergunta) + 1
+    sub_varias = int(pergunta) - unica
+    varias = int(pergunta)
+
+    print(f'Final Mostrando a Tabuada do {pergunta} ')
+
+for tabuadas in range(varias,unica):
+    if tabuadas % 1 == 0:
+        for ate in range(11):
+            print(tabuadas, 'x',ate ,' = ',tabuadas * ate)
+        print(f'\nTabuada do {tabuadas}\n')
